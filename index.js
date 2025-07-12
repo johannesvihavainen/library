@@ -51,9 +51,22 @@ addBookBtn.addEventListener('click', () => {
     const newAuthor = author.value;
     const newPages = pages.value;
 
-    addBookToLibrary(newTitle, newAuthor, newPages)
-    console.log(myLibrary);
-    updateBooks()
+    if (newTitle === '' || newAuthor === '' || newPages === '') {
+        const errorMessage = document.querySelector('.error-message')
+
+        setTimeout(() => {
+            errorMessage.style.display = 'flex'
+        }, 200);
+        setTimeout(() => {
+            errorMessage.style.display = 'none'
+        }, 5000);
+    }
+    else {
+        addBookToLibrary(newTitle, newAuthor, newPages)
+        updateBooks()
+    }
+
+
 
 })
 

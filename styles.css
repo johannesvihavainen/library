@@ -68,9 +68,23 @@ body {
 .new-book-form input {
     height: 20px;
 }
+
 .add-book-btn:hover {
     background-color: hsl(39, 97%, 65%);
 }
+
 .add-book-btn:active {
     background-color: hsl(39, 97%, 80%);
+}
+
+.error-message {
+    background-color: red;
+    height: 35px;
+    color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
